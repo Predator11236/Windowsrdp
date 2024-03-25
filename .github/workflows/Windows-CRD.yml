@@ -7,9 +7,6 @@ on:
       authcode:
         description: 'Enter CRD code'
         required: true
-      pincode:
-        description: '123456'
-        required: true
   
 jobs:
   build:
@@ -20,6 +17,6 @@ jobs:
     - name: Initializing Setup
       run: ./setup.ps1
     - name: Starting CRD
-      run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
+      run: ${{ github.event.inputs.authcode }}
     - name: Keep Alive
       run: ./timeout.ps1
