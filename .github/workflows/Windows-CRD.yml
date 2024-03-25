@@ -8,7 +8,7 @@ on:
         description: 'Enter CRD code'
         required: true
       pincode:
-        description: '123456', '123456'
+        description: '123456'
         required: true
   
 jobs:
